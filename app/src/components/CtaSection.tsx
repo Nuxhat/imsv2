@@ -22,7 +22,7 @@ const CtaSection = () => {
 
             {/* Badge */}
             <div className="mb-10 px-6 py-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-md inline-flex items-center gap-4">
-              <span className="text-company-teal font-extrabold text-2xl leading-none">
+              <span className="text-company-teal   text-2xl leading-none">
                 +
               </span>
 
@@ -30,13 +30,13 @@ const CtaSection = () => {
                 Continuous System Health
               </span>
 
-              <span className="text-company-teal font-extrabold text-2xl leading-none">
+              <span className="text-company-teal   text-2xl leading-none">
                 +
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="text-5xl md:text-[72px] lg:text-[90px] font-extrabold text-white mb-8 leading-[1.05] tracking-tight">
+            <h2 className="text-5xl md:text-[72px] lg:text-[90px]   text-white mb-8 leading-[1.05] tracking-tight">
               Thriving on consistent,
               <br className="hidden lg:block" />
               <span className="text-company-teal">
@@ -54,8 +54,8 @@ const CtaSection = () => {
 
             {/* CTA Button */}
             <div className="origin-left">
-               <MyButton variant="hero">
-  Get Support Now
+          <MyButton variant="dark">
+   Get Support Now
 </MyButton>
 
             </div>

@@ -41,7 +41,7 @@ const PortfolioSection = () => {
         {/* HEADER AREA - Safely Animated */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
           <ScrollReveal delay={0}>
-            <h2 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold text-company-deep leading-[1.1] max-w-xl tracking-tight">
+            <h2 className="heading-main lg:text-[56px]   text-company-deep leading-[1.1] max-w-xl tracking-tight">
               Explore the Recent <br className="hidden md:block" />
               Works We Have Done!
             </h2>
@@ -73,13 +73,13 @@ const PortfolioSection = () => {
                 <div className="flex flex-col items-start">
                   {/* Badge */}
                   <div className="mb-6 px-5 py-2 rounded-full border border-gray-200 bg-white inline-flex items-center gap-2 shadow-sm">
-                    <span className="text-company-teal font-extrabold text-lg leading-none">+</span>
+                    <span className="text-company-teal   text-lg leading-none">+</span>
                     <span className="text-sm font-bold tracking-widest text-company-deep uppercase">{card.badge}</span>
-                    <span className="text-company-teal font-extrabold text-lg leading-none">+</span>
+                    <span className="text-company-teal   text-lg leading-none">+</span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-4xl md:text-5xl font-extrabold text-company-deep mb-6 leading-tight tracking-tight whitespace-pre-line">
+                  <h3 className="heading-main   text-company-deep mb-6 leading-tight tracking-tight whitespace-pre-line">
                     {card.title}
                   </h3>
 
@@ -89,7 +89,7 @@ const PortfolioSection = () => {
                   </p>
 
                   {/* Button */}
-                  <MyButton variant="about">Learn More</MyButton>
+              <MyButton variant="dark">Learn More</MyButton>
                 </div>
               </ScrollReveal>
 

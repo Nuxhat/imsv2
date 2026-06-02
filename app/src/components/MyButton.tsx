@@ -3,75 +3,93 @@ import { ArrowRight } from 'lucide-react';
 
 interface MyButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'outline' | 'header' | 'hero' | 'about';
+  variant?: 'light' | 'dark';
+  type?: 'button' | 'submit' | 'reset'; // 👈 1. Added type support
+  className?: string; // 👈 2. Added support for custom spacing classes
 }
 
 const MyButton: React.FC<MyButtonProps> = ({
   children,
-  variant = 'primary',
+  variant = 'dark',
+  type = 'button', // Defaults to standard button
+  className = '', // Defaults to empty string
 }) => {
-
-  // BASE
-  let baseClasses =
-    "group flex items-center gap-2 font-semibold transition-all duration-300 rounded-full px-6 py-4";
-
-  let variantClasses = "";
-
-  // PRIMARY
-  if (variant === 'primary') {
-    variantClasses =
-      "bg-company-blue text-company-white hover:bg-opacity-90";
-  }
-
-  // OUTLINE
-  else if (variant === 'outline') {
-    variantClasses =
-      "border-2 border-company-teal text-company-teal hover:bg-company-teal hover:text-company-white";
-  }
-
-  // HEADER
-  else if (variant === 'header') {
-    baseClasses =
-      "group flex items-center gap-4 font-bold rounded-full pl-7 pr-2 py-2 transition-all duration-300 bg-white text-company-deep shadow-lg hover:bg-gray-100 hover:scale-105";
-
-    variantClasses = "";
-  }
-
-  // HERO
-  else if (variant === 'hero') {
-    baseClasses =
-      "group flex items-center gap-4 font-bold text-lg rounded-full pl-8 pr-2 py-3 transition-all duration-300 bg-white text-company-deep shadow-xl hover:bg-gray-100 hover:scale-105";
-
-    variantClasses = "";
-  }
-
-  // ABOUT
- else if (variant === 'about') {
-  baseClasses =
-    "group flex items-center gap-4 font-bold rounded-full pl-8 pr-2 py-3 transition-all duration-300 bg-company-blue text-white shadow-xl hover:bg-company-deep hover:scale-105";
-
-  variantClasses = "";
-}
-  // 👉 UNIFIED ARROW STYLE (IMPORTANT FIX)
-  const isLarge = variant === 'hero' || variant === 'header';
+  const isLight = variant === 'light';
 
   return (
-    <button className={`${baseClasses} ${variantClasses}`}>
+    <button
+      type={type}
+      className={`
+        group
+        inline-flex w-max items-center gap-3 /* 👈 3. Added inline-flex and w-max here */
+        rounded-full
+        font-semibold
+        font-poppins
+        text-[16px]
+        leading-[22px]
+        pl-7 pr-2 py-2.5
+        border-2
+        transition-all duration-300
+        hover:scale-105
+        ${
+          isLight
+            ? `
+              bg-white
+              text-[#000A3F]
+              border-[#000A3F]
+              hover:bg-[#000A3F]
+              hover:text-white
+              hover:border-white/45
+            `
+            : `
+              bg-[#000A3F]
+              text-white
+              border-[#000A3F]
+              hover:bg-white
+              hover:text-[#000A3F]
+              hover:border-[#000A3F]
+            `
+        }
+        ${className} /* 👈 4. Injects any extra spacing you pass to the component */
+      `}
+    >
       {children}
 
-      {/* ARROW SYSTEM (NOW CONSISTENT) */}
       <div
         className={`
-          rounded-full transition-all duration-300
-          ${isLarge ? 'p-3 bg-company-teal text-company-deep' : 'p-2 bg-white text-company-blue'}
+          rounded-full
+          p-2.5
+          border-2
+          transition-all duration-300
           group-hover:scale-110
+          ${
+            isLight
+              ? `
+                bg-[#000A3F]
+                text-white
+                border-[#000A3F]
+                group-hover:bg-white
+                group-hover:text-[#000A3F]
+                group-hover:border-white
+              `
+              : `
+                bg-white
+                text-[#000A3F]
+                border-white
+                group-hover:bg-[#000A3F]
+                group-hover:text-white
+                group-hover:border-[#000A3F]
+              `
+          }
         `}
       >
         <ArrowRight
-          className={`
-            transform -rotate-45 transition-all duration-300
-            ${isLarge ? 'h-5 w-5' : 'h-4 w-4'}
-          `}
+          className="
+            h-4 w-4
+            -rotate-45
+            transition-all duration-300
+            group-hover:rotate-0
+          "
         />
       </div>
     </button>

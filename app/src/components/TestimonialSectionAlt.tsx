@@ -41,14 +41,14 @@ const TestimonialSectionAlt = () => {
             <div className="lg:sticky lg:top-32 flex flex-col items-start pb-10">
               <ScrollReveal delay={0}>
                 <div className="mb-8 px-6 py-2.5 rounded-full border border-gray-200 bg-white inline-flex items-center gap-3 shadow-sm">
-                  <span className="text-gray-400 font-extrabold text-xl leading-none">+</span> 
+                  <span className="text-gray-400   text-xl leading-none">+</span> 
                   <span className="text-sm md:text-base font-bold tracking-[0.1em] text-gray-500 uppercase">Testimonial</span> 
-                  <span className="text-gray-400 font-extrabold text-xl leading-none">+</span>
+                  <span className="text-gray-400   text-xl leading-none">+</span>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <h2 className="text-5xl md:text-6xl font-extrabold text-company-deep leading-[1.15] tracking-tight">
+                <h2 className="text-5xl md:text-6xl   text-company-deep leading-[1.15] tracking-tight">
                   See what our customers have to say about us
                 </h2>
               </ScrollReveal>

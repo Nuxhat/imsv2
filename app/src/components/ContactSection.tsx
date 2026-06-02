@@ -1,6 +1,7 @@
 // src/components/ContactSection.tsx
 import { ArrowRight, CheckCircle2, Users } from 'lucide-react';
 import ScrollReveal from './ScrollReveal'; // Import the animator!
+import MyButton from './MyButton';
 
 const ContactSection = () => {
   return (
@@ -15,17 +16,17 @@ const ContactSection = () => {
             <ScrollReveal delay={0}>
               {/* Pill Badge */}
               <div className="mb-10 px-6 py-3 rounded-full border border-gray-200 bg-white inline-flex items-center gap-4 shadow-sm">
-                <span className="text-company-teal font-extrabold text-2xl leading-none">+</span> 
+                <span className="text-company-teal   text-2xl leading-none">+</span> 
                 <span className="text-sm md:text-base font-bold tracking-[0.2em] text-company-deep uppercase">
                   Contact Us
                 </span> 
-                <span className="text-company-teal font-extrabold text-2xl leading-none">+</span>
+                <span className="text-company-teal   text-2xl leading-none">+</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
               {/* Heading */}
-              <h2 className="text-5xl md:text-6xl lg:text-[72px] font-extrabold text-company-deep leading-[1.05] tracking-tight mb-10">
+              <h2 className="text-5xl md:text-6xl lg:text-[72px]   text-company-deep leading-[1.05] tracking-tight mb-10">
                 Let's Build an Awesome Project Together
               </h2>
             </ScrollReveal>
@@ -47,7 +48,7 @@ const ContactSection = () => {
                     <CheckCircle2 className="w-10 h-10 text-company-teal" />
                   </div>
                   <div>
-                    <h4 className="text-3xl font-extrabold text-company-deep mb-3 tracking-tight">
+                    <h4 className="text-3xl   text-company-deep mb-3 tracking-tight">
                       50+ SAP Go-Lives
                     </h4>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg">
@@ -64,7 +65,7 @@ const ContactSection = () => {
                     <Users className="w-10 h-10 text-company-teal" />
                   </div>
                   <div>
-                    <h4 className="text-3xl font-extrabold text-company-deep mb-3 tracking-tight">
+                    <h4 className="text-3xl   text-company-deep mb-3 tracking-tight">
                       100% AMC Retention
                     </h4>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg">
@@ -87,7 +88,7 @@ const ContactSection = () => {
 
               <div className="relative z-10">
                 
-                <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                <h3 className="heading-main   text-white mb-6 tracking-tight">
                   Make an Appointment
                 </h3>
 
@@ -138,17 +139,9 @@ const ContactSection = () => {
                     className="w-full px-8 py-5 text-lg rounded-2xl bg-white text-company-deep font-medium placeholder:text-gray-400 focus:outline-none focus:ring-4 focus:ring-company-teal/50 transition-all shadow-sm resize-none"
                   />
 
-                  <button
-                    type="submit"
-                    className="mt-6 bg-white text-company-deep hover:bg-gray-100 flex items-center gap-6 font-extrabold rounded-full pl-10 pr-3 py-3 transition-all shadow-xl hover:-translate-y-1 active:scale-95 inline-flex w-max"
-                  >
-                    <span className="text-base uppercase tracking-[0.15em]">
-                      Send Message
-                    </span>
-                    <div className="bg-company-deep text-white rounded-full p-3.5">
-                      <ArrowRight className="h-6 w-6 transform -rotate-45" />
-                    </div>
-                  </button>
+             <MyButton variant="light" type="submit" className="mt-6">
+  Send Message
+</MyButton>
 
                 </form>
 

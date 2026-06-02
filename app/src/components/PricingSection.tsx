@@ -64,15 +64,15 @@ const PricingSection = () => {
           <ScrollReveal delay={0}>
             {/* Pill Badge */}
             <div className="mb-6 px-6 py-2.5 rounded-full border border-gray-200 bg-white inline-flex items-center gap-2 shadow-sm">
-              <span className="text-gray-400 font-extrabold text-lg leading-none">+</span> 
+              <span className="text-gray-400   text-lg leading-none">+</span> 
               <span className="text-sm font-bold tracking-widest text-company-deep uppercase">Pricing Plan</span> 
-              <span className="text-gray-400 font-extrabold text-lg leading-none">+</span>
+              <span className="text-gray-400   text-lg leading-none">+</span>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             {/* Headline */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-company-deep leading-tight tracking-tight">
+            <h2 className="heading-main     text-company-deep leading-tight tracking-tight">
               Choose Your Perfect Plans
             </h2>
           </ScrollReveal>
@@ -101,7 +101,7 @@ const PricingSection = () => {
                   
                   {/* Price */}
                   <div className="flex items-baseline gap-1 border-t border-gray-300/30 pt-8">
-                    <span className="text-5xl lg:text-6xl font-extrabold tracking-tight">
+                    <span className="text-5xl     tracking-tight">
                       ${plan.price}
                     </span>
                     <span className={`text-sm font-medium ${plan.isPopular ? 'text-gray-400' : 'text-gray-500'}`}>

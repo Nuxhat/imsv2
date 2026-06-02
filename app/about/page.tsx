@@ -30,7 +30,7 @@ export default function AboutPage() {
         {/* Hero Content */}
         <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl   text-white mb-6 tracking-tight">
             About Us
           </h1>
           

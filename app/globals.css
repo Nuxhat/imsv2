@@ -12,12 +12,13 @@
    TAILWIND THEME EXTENSIONS
    (Tailwind v4 @theme system)
 ========================= */
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Set Poppins as the master font for the whole website */
+  --font-sans: var(--font-poppins), sans-serif;
 
   /* --- Company Colors --- */
   --color-company-white: #ffffff;
@@ -31,7 +32,6 @@
   --color-accent-orange: #f4a261;
   --color-accent-green: #22c55e;
 }
-
 /* =========================
    DARK MODE
 ========================= */
@@ -51,6 +51,7 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
   transition: background 0.3s ease, color 0.3s ease;
 }
+
 /* Infinite Marquee Animation for Logo Ticker */
 .animate-marquee {
   display: flex;
@@ -60,5 +61,20 @@ body {
 
 @keyframes marquee {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); } /* Scrolls exactly half the width to loop seamlessly */
+  100% { transform: translateX(-50%); }
+}
+
+/* =========================
+   CUSTOM COMPONENT CLASSES
+========================= */
+@layer components {
+  /* Master class for all your big H2 section titles */
+  .heading-main {
+    @apply text-4xl md:text-[50px] font-semibold text-[#1C2539] leading-tight md:leading-[60px];
+  }
+
+  /* Master class for all your standard paragraphs */
+  .text-main {
+    @apply text-[18px] leading-[28px] font-normal text-[#1C2539];
+  }
 }

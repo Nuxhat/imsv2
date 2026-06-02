@@ -30,13 +30,13 @@ const ConsultationSection = () => {
               
               {/* Pill Badge */}
               <div className="mb-6 px-5 py-2 rounded-full border border-gray-200 inline-flex items-center gap-2 w-max shadow-sm">
-                <span className="text-company-teal font-extrabold text-lg leading-none">+</span>
+                <span className="text-company-teal   text-lg leading-none">+</span>
                 <span className="text-sm font-bold tracking-widest text-company-deep uppercase">Contact Us</span>
-                <span className="text-company-teal font-extrabold text-lg leading-none">+</span>
+                <span className="text-company-teal   text-lg leading-none">+</span>
               </div>
 
               {/* Headline */}
-              <h2 className="text-4xl md:text-5xl font-extrabold text-company-deep leading-[1.1] tracking-tight mb-6">
+              <h2 className="heading-main   text-company-deep leading-[1.1] tracking-tight mb-6">
                 Get free business consultation today
               </h2>
 

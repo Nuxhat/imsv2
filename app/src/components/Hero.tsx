@@ -4,7 +4,7 @@ import MyButton from './MyButton';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24">
+    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-32 overflow-hidden">
       
       {/* 1. BACKGROUND IMAGE */}
       <div 
@@ -25,8 +25,8 @@ const Hero = () => {
           <span className="text-company-teal font-bold text-lg leading-none">+</span>
         </div>
 
-        {/* MAIN HEADLINE - Increased size significantly and tightened line-height */}
-       <h1 className="text-6xl md:text-[95px] lg:text-[110px] font-extrabold text-white mb-6 leading-[1.05] tracking-tight">
+{/* Notice the very first class is now font-poppins! */}
+<h1 className="font-poppins text-5xl md:text-7xl lg:text-[90px] font-bold text-white mb-6 leading-tight lg:leading-[104px] tracking-tight">
   Business Growth<br /> Made Simple
 </h1>
 
@@ -35,10 +35,9 @@ const Hero = () => {
           Transform your business with expert consultancy services our team of seasoned consultants unparalleled. Transform your business.
         </p>
 
-    <MyButton variant="hero">
-  Free Consultation
+    <MyButton variant="light">
+  Let's Talk
 </MyButton>
-
       </div>
     </section>
   );

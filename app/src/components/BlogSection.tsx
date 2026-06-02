@@ -36,12 +36,12 @@ const BlogSection = () => {
         <div className="flex flex-col items-center text-center mb-16">
           {/* Pill Badge */}
           <div className="mb-6 px-6 py-2.5 rounded-full border border-gray-200 bg-white inline-flex items-center gap-3 shadow-sm">
-            <span className="text-company-teal font-extrabold text-xl leading-none">+</span> 
+            <span className="text-company-teal   text-xl leading-none">+</span> 
             <span className="text-sm md:text-base font-bold tracking-[0.2em] text-company-deep uppercase">Our Blog</span> 
-            <span className="text-company-teal font-extrabold text-xl leading-none">+</span>
+            <span className="text-company-teal   text-xl leading-none">+</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-company-deep leading-tight tracking-tight">
+          <h2 className="heading-main     text-company-deep leading-tight tracking-tight">
             Latest News From Us
           </h2>
         </div>
@@ -80,7 +80,7 @@ const BlogSection = () => {
 
                 {/* Blog Title */}
                 {/* The title turns your primary Teal color when the card is hovered */}
-                <h3 className="text-2xl md:text-[28px] font-extrabold text-company-deep leading-snug transition-colors duration-300">
+                <h3 className="text-2xl md:text-[28px]   text-company-deep leading-snug transition-colors duration-300">
                   {post.title}
                 </h3>
 
@@ -92,7 +92,7 @@ const BlogSection = () => {
 
         {/* FOOTER BUTTON */}
         <div className="flex justify-center">
-        <MyButton variant="about">
+    <MyButton variant="dark">
   Disccover More
 </MyButton> 
         </div>

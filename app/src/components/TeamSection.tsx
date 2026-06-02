@@ -38,15 +38,15 @@ const TeamSection = () => {
           <ScrollReveal delay={0}>
             {/* Pill Badge */}
             <div className="mb-6 px-6 py-2 rounded-full border border-gray-200 bg-white inline-flex items-center gap-2 shadow-sm">
-              <span className="text-company-teal font-extrabold text-lg leading-none">+</span> 
+              <span className="text-company-teal   text-lg leading-none">+</span> 
               <span className="text-sm font-bold tracking-widest text-company-deep uppercase">Our Team</span> 
-              <span className="text-company-teal font-extrabold text-lg leading-none">+</span>
+              <span className="text-company-teal   text-lg leading-none">+</span>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             {/* Headline */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-company-deep leading-tight tracking-tight">
+            <h2 className="heading-main     text-company-deep leading-tight tracking-tight">
               Meet the experts behind <br className="hidden md:block" />
               your success
             </h2>

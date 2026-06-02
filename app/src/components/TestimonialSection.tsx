@@ -32,15 +32,15 @@ const TestimonialSection = () => {
           <ScrollReveal delay={0}>
             {/* Pill Badge */}
             <div className="mb-8 px-6 py-2.5 rounded-full border border-gray-200 bg-white inline-flex items-center gap-3 shadow-sm">
-              <span className="text-company-teal font-extrabold text-xl leading-none">+</span> 
+              <span className="text-company-teal   text-xl leading-none">+</span> 
               <span className="text-sm md:text-base font-bold tracking-[0.2em] text-company-deep uppercase">Testimonials</span> 
-              <span className="text-company-teal font-extrabold text-xl leading-none">+</span>
+              <span className="text-company-teal   text-xl leading-none">+</span>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             {/* Headline */}
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-company-deep leading-[1.1] tracking-tight">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl   text-company-deep leading-[1.1] tracking-tight">
               See what our customers <br className="hidden md:block" />
               have to say about us
             </h2>
@@ -86,7 +86,7 @@ const TestimonialSection = () => {
                       />
                     </div>
                     <div className="flex flex-col">
-                      <h4 className="text-xl md:text-2xl font-extrabold text-company-deep leading-tight mb-1">
+                      <h4 className="text-xl md:text-2xl   text-company-deep leading-tight mb-1">
                         {testimonial.name}
                       </h4>
                       <span className="text-base md:text-lg text-gray-500 font-medium">

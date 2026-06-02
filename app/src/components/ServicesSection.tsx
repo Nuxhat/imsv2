@@ -64,7 +64,7 @@ const ServicesSection = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-company-deep leading-tight max-w-2xl">
+            <h2 className="heading-main   text-company-deep leading-tight max-w-2xl">
               Empower your operations to <br />
               <span className="text-company-blue">scale business growth</span>
             </h2>
@@ -113,7 +113,7 @@ const ServicesSection = () => {
         {/* FOOTER BUTTON */}
         <div className="flex justify-center">
           <ScrollReveal delay={800}>
-            <MyButton variant="about">
+        <MyButton variant="dark">
               More Services
             </MyButton>
           </ScrollReveal>

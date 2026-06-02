@@ -133,38 +133,38 @@ const AboutSection = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={300}>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-company-deep mb-6 leading-tight tracking-tight">
-              Redesigning business <br/>
-              <span className="text-company-blue">for solutions</span>
-            </h2>
+           <h2 className="text-4xl md:text-[50px] font-semibold text-[#1C2539] mb-6 leading-tight md:leading-[60px]">
+    Redesigning business <br/>
+    <span className="text-company-blue">for solutions</span>
+  </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={400}>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
-              Our mission is to empower businesses of all sizes to thrive in an ever-changing marketplace. We provide end-to-end SAP B1 solutions.
-            </p>
+           <p className="text-[18px] leading-[28px] font-normal text-[#1C2539] mb-8 max-w-lg">
+    Our mission is to empower businesses of all sizes to thrive in an ever-changing marketplace. We provide end-to-end SAP B1 solutions.
+  </p>
           </ScrollReveal>
 
-          <div className="flex flex-col gap-5 mb-12 w-full">
-            {[
-              'Integrate a diverse range of ideas',
-              'Deliver the highest quality outcomes',
-              'Believe in power of implication'
-            ].map((text, i) => (
-              // Stagger the list items dynamically (500, 600, 700ms)
-              <ScrollReveal key={i} delay={500 + (i * 100)}>
-                <div className="flex items-center gap-4">
-                  <div className="rounded-full border-2 border-gray-300 p-0.5">
-                    <CheckCircle2 className="w-4 h-4 text-gray-600 flex-shrink-0" />
-                  </div>
-                  <span className="text-gray-700 font-medium">{text}</span>
-                </div>
-              </ScrollReveal>
-            ))}
+ <div className="flex flex-col gap-5 mb-12 w-full">
+  {[
+    'Integrate a diverse range of ideas',
+    'Deliver the highest quality outcomes',
+    'Believe in power of implication'
+  ].map((text, i) => (
+    <div key={i} className="flex items-center gap-3">
+      {/* Assuming you have a checkmark icon or bullet point here */}
+      <div className="h-2 w-2 rounded-full bg-company-teal"></div>
+      
+      {/* LIST TEXT: Matched to the 18px / 28px line-height specs */}
+      <span className="text-[18px] leading-[28px] font-normal text-[#1C2539]">
+        {text}
+      </span>
+    </div>
+  ))}
           </div>
 
           <ScrollReveal delay={800}>
-            <MyButton variant="about">
+        <MyButton variant="dark">
               More About Us
             </MyButton>
           </ScrollReveal>

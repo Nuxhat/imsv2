@@ -59,7 +59,7 @@ const ChooseUsSection = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-company-deep mb-8 leading-[1.1] tracking-tight">
+              <h2 className="heading-main     text-company-deep mb-8 leading-[1.1] tracking-tight">
                 Empowering Growth on a <span className="text-company-blue">Global Scale</span>
               </h2>
             </ScrollReveal>
@@ -71,7 +71,7 @@ const ChooseUsSection = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={500}>
-              <MyButton variant="about">
+          <MyButton variant="dark">
                 More About Us
               </MyButton>
             </ScrollReveal>
@@ -93,7 +93,7 @@ const ChooseUsSection = () => {
                   </svg>
                   {/* Center Circle */}
                   <div className="bg-company-deep rounded-full w-[84px] h-[84px] flex items-center justify-center z-10 shadow-xl">
-                    <span className="text-white text-3xl font-extrabold">3+</span>
+                    <span className="text-white text-3xl  ">3+</span>
                   </div>
                 </div>
               </ScrollReveal>
@@ -121,7 +121,7 @@ const ChooseUsSection = () => {
                   {feature.icon}
                 </div>
 
-                <h4 className="text-2xl font-extrabold text-company-deep mb-3 transition-colors duration-300 group-hover:text-company-blue">
+                <h4 className="text-2xl   text-company-deep mb-3 transition-colors duration-300 group-hover:text-company-blue">
                   {feature.title}
                 </h4>
                 
