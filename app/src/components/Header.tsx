@@ -3,13 +3,16 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import MyButton from './MyButton';
+// 👇 Added Menu and X icons for the mobile toggle
+import { Menu, X } from 'lucide-react'; 
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  // 👇 State to track if mobile menu drawer is open
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
-      // If the user scrolls down more than 50 pixels, trigger the solid background
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
@@ -17,38 +20,36 @@ const Header = () => {
       }
     };
 
-    // Listen for the scroll event
     window.addEventListener('scroll', handleScroll);
-    
-    // Cleanup the listener when the component unmounts
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const menuItems = ['Home', 'About Us', 'Services', 'Pages', 'Blog', 'Contact'];
 
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 text-white transition-all duration-500 ${
-        isScrolled 
+        isScrolled || isMenuOpen
           ? 'bg-company-deep shadow-2xl border-b border-transparent' 
           : 'bg-white/[0.03] backdrop-blur-md border-b border-white/10'
       }`}
     >
       
-      {/* Container: Changed to standard flex (removed justify-between) and balanced the padding */}
+      {/* MAIN NAVBAR ROW */}
       <div className="w-full px-8 lg:px-12 flex items-center h-24 transition-all duration-500">
         
-        {/* LOGO AREA: flex-1 ensures it takes up equal space as the right side, balancing the nav */}
+        {/* LOGO AREA */}
         <div className="flex-1 flex justify-start items-center h-full relative">
           <img 
             src="/logo.png" 
             alt="Company Logo" 
-            /* Added -ml-4 to pull the logo slightly left to counteract any blank space inside the PNG */
             className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 h-[180px] w-auto object-contain scale-125 origin-left transition-transform duration-500 hover:scale-[1.3]" 
           />
         </div>
 
-        {/* NAVIGATION: flex-none keeps it its natural width, locking it perfectly in the center */}
-{/* In your Header.tsx, change the <nav> classes to this: */}
-<nav className="hidden lg:flex flex-none items-center gap-10 xl:gap-12 text-base font-normal">          {['Home', 'About Us', 'Services', 'Pages', 'Blog', 'Contact'].map((item) => {
+        {/* DESKTOP NAVIGATION (Hidden on mobile) */}
+        <nav className="hidden lg:flex flex-none items-center gap-10 xl:gap-12 text-base font-normal">
+          {menuItems.map((item) => {
             let url = "/";
             if (item === "About Us") url = "/about";
             if (item === "Services") url = "/services";
@@ -69,14 +70,55 @@ const Header = () => {
           })}
         </nav>
 
-        {/* BUTTON AREA: flex-1 matches the left side, justify-end pushes the button flush to the right edge */}
-       {/* BUTTON AREA */}
-<div className="flex-1 flex justify-end items-center h-full">
-  <MyButton variant="light">
-    Let's Talk
-  </MyButton>
-</div>
+        {/* RIGHT SIDE AREA: Holds desktop button AND mobile hamburger */}
+        <div className="flex-1 flex justify-end items-center h-full gap-4">
+          {/* Desktop "Let's Talk" Button (hidden on tiny screens so it doesn't crash into logo) */}
+          <div className="hidden sm:block">
+            <MyButton variant="light">
+              Let's Talk
+            </MyButton>
+          </div>
+
+          {/* 👇 HAMBURGER TOGGLE BUTTON (Visible only on mobile/tablet) */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 text-white hover:text-company-teal transition-colors focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+          </button>
+        </div>
       </div>
+
+      {/* 👇 MOBILE DROP-DOWN DRAWER (Visible only when open on mobile) */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-company-deep border-t border-white/10 px-8 py-6 flex flex-col gap-5 shadow-inner transition-all duration-300">
+          {menuItems.map((item) => {
+            let url = "/";
+            if (item === "About Us") url = "/about";
+            if (item === "Services") url = "/services";
+            if (item === "Contact") url = "/contact";
+
+            return (
+              <Link
+                key={item}
+                href={url}
+                onClick={() => setIsMenuOpen(false)} // Closes menu when clicked
+                className="text-lg font-normal text-white hover:text-company-teal transition-colors duration-200 py-1"
+              >
+                {item}
+              </Link>
+            );
+          })}
+          
+          {/* Mobile-only fallback CTA button if screen is extremely small */}
+          <div className="sm:hidden mt-2 pt-4 border-t border-white/10">
+            <MyButton variant="light">
+              Let's Talk
+            </MyButton>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
