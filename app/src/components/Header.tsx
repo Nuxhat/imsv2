@@ -24,7 +24,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 👈 Robust, multi-target scroll function
+  // Multi-target scroll handler to cover all mobile browser engines
   const handleHomeScroll = () => {
     const scrollOptions: ScrollToOptions = { top: 0, behavior: 'smooth' };
     window.scrollTo(scrollOptions);
@@ -116,14 +116,18 @@ const Header = () => {
                 key={item}
                 href={url}
                 onClick={(e) => {
-                  setIsMenuOpen(false); // Close menu instantly
-                  
+                  // If we are on the homepage and clicking Home, intercept it safely
                   if (item === "Home" && pathname === "/") {
                     e.preventDefault(); 
-                    // 👈 Wait 100ms for the mobile drawer layout shift to settle before scrolling!
+                    handleHomeScroll(); // 1. Run scroll instantly while button is mounted
+                    
+                    // 2. Wait 150ms for scroll to initiate before removing element from DOM
                     setTimeout(() => {
-                      handleHomeScroll();
-                    }, 100);
+                      setIsMenuOpen(false);
+                    }, 150);
+                  } else {
+                    // For all other links, close menu immediately and navigate
+                    setIsMenuOpen(false);
                   }
                 }}
                 className="text-lg font-normal text-white hover:text-company-teal transition-colors duration-200 py-1"
