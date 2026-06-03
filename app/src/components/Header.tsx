@@ -50,8 +50,8 @@ const Header = () => {
           <img 
             src="/logo.png" 
             alt="Company Logo" 
-            /* 👇 FIXED: Logo is now h-14 on mobile so it doesn't overlap text, and scales up only on desktop (lg:) */
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 h-14 lg:h-[180px] w-auto object-contain lg:scale-125 origin-left transition-transform duration-500 lg:hover:scale-[1.3]" 
+            /* 👇 CHANGED: Bumped mobile height up to h-20 (80px) for better visibility */
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 h-20 lg:h-[180px] w-auto object-contain lg:scale-125 origin-left transition-transform duration-500 lg:hover:scale-[1.3]" 
           />
         </div>
 
