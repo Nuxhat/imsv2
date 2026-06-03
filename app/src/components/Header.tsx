@@ -3,12 +3,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import MyButton from './MyButton';
-// 👇 Added Menu and X icons for the mobile toggle
 import { Menu, X } from 'lucide-react'; 
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  // 👇 State to track if mobile menu drawer is open
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   useEffect(() => {
@@ -47,7 +45,7 @@ const Header = () => {
           />
         </div>
 
-        {/* DESKTOP NAVIGATION (Hidden on mobile) */}
+        {/* DESKTOP NAVIGATION */}
         <nav className="hidden lg:flex flex-none items-center gap-10 xl:gap-12 text-base font-normal">
           {menuItems.map((item) => {
             let url = "/";
@@ -59,6 +57,11 @@ const Header = () => {
               <Link
                 key={item}
                 href={url}
+                onClick={() => {
+                  if (item === "Home") {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
                 className="group relative flex items-center gap-2 transition-colors duration-300 hover:text-company-teal"
               >
                 <span className="relative py-2">
@@ -70,16 +73,14 @@ const Header = () => {
           })}
         </nav>
 
-        {/* RIGHT SIDE AREA: Holds desktop button AND mobile hamburger */}
+        {/* RIGHT SIDE AREA */}
         <div className="flex-1 flex justify-end items-center h-full gap-4">
-          {/* Desktop "Let's Talk" Button (hidden on tiny screens so it doesn't crash into logo) */}
           <div className="hidden sm:block">
             <MyButton variant="light">
               Let's Talk
             </MyButton>
           </div>
 
-          {/* 👇 HAMBURGER TOGGLE BUTTON (Visible only on mobile/tablet) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 text-white hover:text-company-teal transition-colors focus:outline-none"
@@ -90,7 +91,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* 👇 MOBILE DROP-DOWN DRAWER (Visible only when open on mobile) */}
+      {/* MOBILE DROP-DOWN DRAWER */}
       {isMenuOpen && (
         <div className="lg:hidden bg-company-deep border-t border-white/10 px-8 py-6 flex flex-col gap-5 shadow-inner transition-all duration-300">
           {menuItems.map((item) => {
@@ -103,7 +104,12 @@ const Header = () => {
               <Link
                 key={item}
                 href={url}
-                onClick={() => setIsMenuOpen(false)} // Closes menu when clicked
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  if (item === "Home") {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
                 className="text-lg font-normal text-white hover:text-company-teal transition-colors duration-200 py-1"
               >
                 {item}
@@ -111,7 +117,6 @@ const Header = () => {
             );
           })}
           
-          {/* Mobile-only fallback CTA button if screen is extremely small */}
           <div className="sm:hidden mt-2 pt-4 border-t border-white/10">
             <MyButton variant="light">
               Let's Talk
