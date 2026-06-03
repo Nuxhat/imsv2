@@ -47,11 +47,11 @@ export default function ServicesPage() {
 
       {/* 3. YOUR EXISTING SERVICES SECTION */}
       <div className="pt-10">
-        <ServicesSection />
+       <ServicesSection showMoreButton={false} />
       </div>
 
       {/* 4. THE NEW PRICING SECTION */}
-      <PricingSection />
+      {/* <PricingSection /> */}
 
  
        {/* 5. TEAM SECTION */}

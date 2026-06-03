@@ -10,6 +10,17 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const pathname = usePathname(); 
+  const menuItems = ['Home', 'About Us', 'Services', 'Contact'];
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const servicesDropdown = [
+  { name: "SAP B1 Implementation", href: "/services/sap-b1-implementation" },
+  { name: "Web Portal Integration", href: "/services/web-portal-integration" },
+  { name: "Annual Maintenance (AMC)", href: "/services/amc" },
+  { name: "Custom Add-on Dev", href: "/services/custom-add-on-dev" },
+  { name: "Data & HANA Reporting", href: "/services/data-hana-reporting" },
+  { name: "User Training & Audits", href: "/services/user-training-audits" },
+];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,8 +41,8 @@ const Header = () => {
     document.documentElement.scrollTo(scrollOptions);
     document.body.scrollTo(scrollOptions);
   };
+const [dropdownTimeout, setDropdownTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
 
-  const menuItems = ['Home', 'About Us', 'Services', 'Pages', 'Blog', 'Contact'];
 
   return (
     <header 
@@ -56,33 +67,78 @@ const Header = () => {
         </div>
 
         {/* DESKTOP NAVIGATION */}
-        <nav className="hidden lg:flex flex-none items-center gap-10 xl:gap-12 text-base font-normal">
-          {menuItems.map((item) => {
-            let url = "/";
-            if (item === "About Us") url = "/about";
-            if (item === "Services") url = "/services";
-            if (item === "Contact") url = "/contact";
+ <nav className="hidden lg:flex flex-none items-center gap-10 xl:gap-12 text-base font-normal relative">
+  
+  {/* HOME */}
+  <Link href="/" className="hover:text-company-teal">
+    Home
+  </Link>
 
-            return (
-              <Link
-                key={item}
-                href={url}
-                onClick={(e) => {
-                  if (item === "Home" && pathname === "/") {
-                    e.preventDefault(); 
-                    handleHomeScroll();
-                  }
-                }}
-                className="group relative flex items-center gap-2 transition-colors duration-300 hover:text-company-teal"
-              >
-                <span className="relative py-2">
-                  {item}
-                  <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-company-teal transition-all duration-300 group-hover:w-full"></span>
-                </span>
-              </Link>
-            );
-          })}
-        </nav>
+  {/* ABOUT */}
+  <Link href="/about" className="hover:text-company-teal">
+    About Us
+  </Link>
+
+  {/* SERVICES DROPDOWN */}
+  <div
+  className="relative"
+  onMouseEnter={() => {
+    if (dropdownTimeout) clearTimeout(dropdownTimeout);
+    setIsServicesOpen(true);
+  }}
+  onMouseLeave={() => {
+    const timeout = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 300); // IMPORTANT: gives time to move cursor into dropdown
+
+    setDropdownTimeout(timeout);
+  }}
+>
+  {/* SERVICES BUTTON */}
+  <div className="flex items-center gap-1 cursor-pointer select-none">
+    <Link
+      href="/services"
+      onClick={() => setIsServicesOpen(false)}
+      className="hover:text-company-teal transition-colors"
+    >
+      Services
+    </Link>
+
+    {/* small arrow */}
+    <span className="text-xs mt-[2px]">▾</span>
+  </div>
+
+  {/* DROPDOWN */}
+  {isServicesOpen && (
+    <div
+      className="absolute top-full left-0 mt-3 w-72 bg-white text-black shadow-xl rounded-xl overflow-hidden border border-gray-100 z-50"
+      onMouseEnter={() => {
+        if (dropdownTimeout) clearTimeout(dropdownTimeout);
+        setIsServicesOpen(true);
+      }}
+      onMouseLeave={() => {
+        setIsServicesOpen(false);
+      }}
+    >
+      {servicesDropdown.map((service) => (
+        <Link
+          key={service.href}
+          href={service.href}
+          onClick={() => setIsServicesOpen(false)}
+          className="block px-5 py-3 text-sm hover:bg-gray-100 transition"
+        >
+          {service.name}
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
+
+  {/* CONTACT */}
+  <Link href="/contact" className="hover:text-company-teal">
+    Contact
+  </Link>
+</nav>
 
         {/* RIGHT SIDE AREA */}
         <div className="flex-1 flex justify-end items-center h-full gap-4">
@@ -104,43 +160,53 @@ const Header = () => {
 
       {/* MOBILE DROP-DOWN DRAWER */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-company-deep border-t border-white/10 px-8 py-6 flex flex-col gap-5 shadow-inner transition-all duration-300">
-          {menuItems.map((item) => {
-            let url = "/";
-            if (item === "About Us") url = "/about";
-            if (item === "Services") url = "/services";
-            if (item === "Contact") url = "/contact";
+  <div className="lg:hidden bg-company-deep border-t border-white/10 px-8 py-6 flex flex-col gap-5 shadow-inner">
 
-            return (
-              <Link
-                key={item}
-                href={url}
-                onClick={(e) => {
-                  if (item === "Home" && pathname === "/") {
-                    e.preventDefault(); 
-                    handleHomeScroll(); 
-                    
-                    setTimeout(() => {
-                      setIsMenuOpen(false);
-                    }, 150);
-                  } else {
-                    setIsMenuOpen(false);
-                  }
-                }}
-                className="text-lg font-normal text-white hover:text-company-teal transition-colors duration-200 py-1"
-              >
-                {item}
-              </Link>
-            );
-          })}
-          
-          <div className="sm:hidden mt-2 pt-4 border-t border-white/10">
-            <MyButton variant="light">
-              Let's Talk
-            </MyButton>
-          </div>
-        </div>
-      )}
+    {/* MAIN LINKS */}
+    {menuItems.map((item) => {
+      let url = "/";
+
+      if (item === "About Us") url = "/about";
+      if (item === "Contact") url = "/contact";
+      if (item === "Services") return null; // handled separately
+
+      return (
+        <Link
+          key={item}
+          href={url}
+          onClick={() => setIsMenuOpen(false)}
+          className="text-lg text-white hover:text-company-teal"
+        >
+          {item}
+        </Link>
+      );
+    })}
+
+    {/* SERVICES SECTION (FIXED) */}
+    <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
+      <p className="text-company-teal font-semibold">Services</p>
+
+      {servicesDropdown.map((service) => (
+        <Link
+          key={service.href}
+          href={service.href}
+          onClick={() => setIsMenuOpen(false)}
+          className="text-white/80 hover:text-company-teal pl-3"
+        >
+          {service.name}
+        </Link>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="sm:hidden pt-4 border-t border-white/10">
+      <MyButton variant="light">
+        Let's Talk
+      </MyButton>
+    </div>
+
+  </div>
+)}
     </header>
   );
 };

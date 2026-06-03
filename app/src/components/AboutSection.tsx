@@ -164,9 +164,9 @@ const AboutSection = () => {
           </div>
 
           <ScrollReveal delay={800}>
-        <MyButton variant="dark">
-              More About Us
-            </MyButton>
+       <MyButton variant="dark" href="/about">
+  More About Us
+</MyButton>
           </ScrollReveal>
 
         </div>

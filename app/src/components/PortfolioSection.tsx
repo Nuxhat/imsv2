@@ -38,75 +38,84 @@ const PortfolioSection = () => {
     <section className="bg-white py-20 md:py-24 relative">
       <div className="container mx-auto px-6 lg:px-12">
         
-        {/* HEADER AREA - Safely Animated */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
+        {/* HEADER AREA */}
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-24">
           <ScrollReveal delay={0}>
-            <h2 className="heading-main lg:text-[56px]   text-company-deep leading-[1.1] max-w-xl tracking-tight">
+            <h2 className="heading-main lg:text-[56px] text-company-deep leading-[1.1] max-w-xl tracking-tight">
               Explore the Recent <br className="hidden md:block" />
               Works We Have Done!
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <p className="text-lg text-gray-600 max-w-xl leading-relaxed lg:mt-4">
+            <p className="text-[18px] leading-[28px] font-normal text-[#1C2539] max-w-xl lg:mt-4">
               Our SAP consulting team specializes in providing innovative,
               enterprise-grade ERP systems that harness the power of real-time
               data, reducing operational bottlenecks for clients worldwide.
             </p>
           </ScrollReveal>
         </div>
+      </div>
 
-        {/* STACKING CARDS CONTAINER */}
-        <div className="relative flex flex-col gap-0 pb-40">
-          {portfolioCards.map((card) => (
-            <div
-              key={card.id}
-              // STRICT RULE: DO NOT put ScrollReveal on this outer div, or sticky breaks!
-              // Note: I moved z-index to inline styles because Tailwind cannot read dynamic z-[${id}] at build time.
-              className={`sticky top-24 ${card.bgColor} w-full h-auto lg:h-[680px] overflow-hidden rounded-[32px] md:rounded-[40px] p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center shadow-2xl transition-all duration-500 hover:scale-[1.01]`}
-              style={{ zIndex: card.id }} 
-            >
-              
-              {/* LEFT SIDE: Text Content */}
-              {/* We wrap this in ScrollReveal so it animates IN when the card scrolls into view */}
-              <ScrollReveal delay={100} className="w-full lg:w-1/2">
-                <div className="flex flex-col items-start">
-                  {/* Badge */}
-                  <div className="mb-6 px-5 py-2 rounded-full border border-gray-200 bg-white inline-flex items-center gap-2 shadow-sm">
-                    <span className="text-company-teal   text-lg leading-none">+</span>
-                    <span className="text-sm font-bold tracking-widest text-company-deep uppercase">{card.badge}</span>
-                    <span className="text-company-teal   text-lg leading-none">+</span>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="heading-main   text-company-deep mb-6 leading-tight tracking-tight whitespace-pre-line">
-                    {card.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-lg text-company-deep/80 mb-10 leading-relaxed font-medium">
-                    {card.description}
-                  </p>
-
-                  {/* Button */}
-              <MyButton variant="dark">Learn More</MyButton>
+      {/* ULTRA-WIDE STACKING CARDS CONTAINER */}
+<div className="relative w-full max-w-[1600px] mx-auto flex flex-col gap-0 pb-40">        {portfolioCards.map((card) => (
+          <div
+            key={card.id}
+            className={`sticky top-28 ${card.bgColor} w-full h-auto lg:h-[760px] overflow-hidden rounded-[32px] md:rounded-[45px] p-8 md:p-14 lg:p-20 flex flex-col lg:flex-row justify-between items-center shadow-2xl transition-all duration-500 hover:scale-[1.002]`}
+            style={{ zIndex: card.id }} 
+          >
+            
+            {/* LEFT SIDE: Text Content (55% space with upgraded typography sizes) */}
+            <ScrollReveal className="w-full lg:w-[55%]" delay={100}>
+              <div className="flex flex-col items-start w-full">
+                
+                {/* Badge: Scaled up to text-base */}
+                <div className="mb-10 px-6 py-2.5 rounded-full border border-gray-200 bg-white inline-flex items-center gap-2 shadow-sm">
+                  <span className="text-company-teal text-xl leading-none">+</span>
+                  <span className="text-base font-bold tracking-widest text-company-deep uppercase">{card.badge}</span>
+                  <span className="text-company-teal text-xl leading-none">+</span>
                 </div>
-              </ScrollReveal>
 
-              {/* RIGHT SIDE: IMAGE */}
-              {/* Delayed slightly so it pops in right after the text */}
-              <ScrollReveal delay={300} className="w-full lg:w-1/2 h-[350px] sm:h-[400px] lg:h-full lg:max-h-[500px]">
-                <div className="relative rounded-[24px] overflow-hidden shadow-xl w-full h-full">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center hover:scale-105 transition-transform duration-700 cursor-pointer"
-                    style={{ backgroundImage: `url('${card.image}')` }}
-                  />
-                </div>
-              </ScrollReveal>
+                <h3
+  className="
+    font-['Poppins']
+    font-semibold
+    text-[36px]
+    md:text-[42px]
+    lg:text-[50px]
+    leading-[44px]
+    md:leading-[52px]
+    lg:leading-[60px]
+    text-[#1C2539]
+    mb-8
+    whitespace-pre-line
+  "
+>
+  {card.title}
+</h3>
 
-            </div>
-          ))}
-        </div>
+                {/* Description: Scaled up to a crisp 20px with matching 32px line height */}
+                <p className="text-lg md:text-[20px] leading-[32px] font-normal text-[#1C2539]/90 mb-12 max-w-3xl">
+                  {card.description}
+                </p>
+
+                {/* Button */}
+                <MyButton variant="dark">Learn More</MyButton>
+              </div>
+            </ScrollReveal>
+
+            {/* RIGHT SIDE: IMAGE */}
+            <ScrollReveal className="w-full lg:w-[40%] h-[400px] sm:h-[500px] lg:h-full lg:max-h-[580px]" delay={300}>
+              <div className="relative rounded-[28px] overflow-hidden shadow-xl w-full h-full">
+                <div
+                  className="absolute inset-0 bg-cover bg-center hover:scale-105 transition-transform duration-700 cursor-pointer"
+                  style={{ backgroundImage: `url('${card.image}')` }}
+                />
+              </div>
+            </ScrollReveal>
+
+          </div>
+        ))}
       </div>
     </section>
   );

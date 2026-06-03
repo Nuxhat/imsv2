@@ -35,8 +35,8 @@ const Hero = () => {
           Transform your business with expert consultancy services our team of seasoned consultants unparalleled. Transform your business.
         </p>
 
-    <MyButton variant="light">
-  Let's Talk
+ <MyButton variant="light" href="/contact">
+  Free Consultation
 </MyButton>
       </div>
     </section>
