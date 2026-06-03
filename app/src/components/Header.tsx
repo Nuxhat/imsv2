@@ -24,7 +24,6 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Multi-target scroll handler to cover all mobile browser engines
   const handleHomeScroll = () => {
     const scrollOptions: ScrollToOptions = { top: 0, behavior: 'smooth' };
     window.scrollTo(scrollOptions);
@@ -51,7 +50,8 @@ const Header = () => {
           <img 
             src="/logo.png" 
             alt="Company Logo" 
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 h-[180px] w-auto object-contain scale-125 origin-left transition-transform duration-500 hover:scale-[1.3]" 
+            /* 👇 FIXED: Logo is now h-14 on mobile so it doesn't overlap text, and scales up only on desktop (lg:) */
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 h-14 lg:h-[180px] w-auto object-contain lg:scale-125 origin-left transition-transform duration-500 lg:hover:scale-[1.3]" 
           />
         </div>
 
@@ -116,17 +116,14 @@ const Header = () => {
                 key={item}
                 href={url}
                 onClick={(e) => {
-                  // If we are on the homepage and clicking Home, intercept it safely
                   if (item === "Home" && pathname === "/") {
                     e.preventDefault(); 
-                    handleHomeScroll(); // 1. Run scroll instantly while button is mounted
+                    handleHomeScroll(); 
                     
-                    // 2. Wait 150ms for scroll to initiate before removing element from DOM
                     setTimeout(() => {
                       setIsMenuOpen(false);
                     }, 150);
                   } else {
-                    // For all other links, close menu immediately and navigate
                     setIsMenuOpen(false);
                   }
                 }}
