@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // 👈 1. Imported the path checker
 import MyButton from './MyButton';
 import { Menu, X } from 'lucide-react'; 
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const pathname = usePathname(); // 👈 2. Initialized the path checker
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,8 +59,10 @@ const Header = () => {
               <Link
                 key={item}
                 href={url}
-                onClick={() => {
-                  if (item === "Home") {
+                onClick={(e) => {
+                  // 👈 3. If clicking Home while ALREADY on the home page, block Next.js and force the scroll
+                  if (item === "Home" && pathname === "/") {
+                    e.preventDefault(); 
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }
                 }}
@@ -104,9 +108,11 @@ const Header = () => {
               <Link
                 key={item}
                 href={url}
-                onClick={() => {
+                onClick={(e) => {
                   setIsMenuOpen(false);
-                  if (item === "Home") {
+                  // 👈 4. Apply the exact same blocking rule to the mobile menu link
+                  if (item === "Home" && pathname === "/") {
+                    e.preventDefault(); 
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }
                 }}
