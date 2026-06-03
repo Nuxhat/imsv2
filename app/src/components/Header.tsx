@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // 👈 1. Imported the path checker
+import { usePathname } from 'next/navigation'; 
 import MyButton from './MyButton';
 import { Menu, X } from 'lucide-react'; 
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
-  const pathname = usePathname(); // 👈 2. Initialized the path checker
+  const pathname = usePathname(); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +23,14 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // 👈 Robust, multi-target scroll function
+  const handleHomeScroll = () => {
+    const scrollOptions: ScrollToOptions = { top: 0, behavior: 'smooth' };
+    window.scrollTo(scrollOptions);
+    document.documentElement.scrollTo(scrollOptions);
+    document.body.scrollTo(scrollOptions);
+  };
 
   const menuItems = ['Home', 'About Us', 'Services', 'Pages', 'Blog', 'Contact'];
 
@@ -60,10 +68,9 @@ const Header = () => {
                 key={item}
                 href={url}
                 onClick={(e) => {
-                  // 👈 3. If clicking Home while ALREADY on the home page, block Next.js and force the scroll
                   if (item === "Home" && pathname === "/") {
                     e.preventDefault(); 
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    handleHomeScroll();
                   }
                 }}
                 className="group relative flex items-center gap-2 transition-colors duration-300 hover:text-company-teal"
@@ -109,11 +116,14 @@ const Header = () => {
                 key={item}
                 href={url}
                 onClick={(e) => {
-                  setIsMenuOpen(false);
-                  // 👈 4. Apply the exact same blocking rule to the mobile menu link
+                  setIsMenuOpen(false); // Close menu instantly
+                  
                   if (item === "Home" && pathname === "/") {
                     e.preventDefault(); 
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    // 👈 Wait 100ms for the mobile drawer layout shift to settle before scrolling!
+                    setTimeout(() => {
+                      handleHomeScroll();
+                    }, 100);
                   }
                 }}
                 className="text-lg font-normal text-white hover:text-company-teal transition-colors duration-200 py-1"
