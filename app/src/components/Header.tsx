@@ -54,20 +54,21 @@ const [dropdownTimeout, setDropdownTimeout] = useState<ReturnType<typeof setTime
     >
       
       {/* MAIN NAVBAR ROW */}
-      <div className="w-full px-8 lg:px-12 flex items-center h-24 transition-all duration-500">
+      <div className="w-full px-8 lg:px-12 flex items-center h-24 transition-all duration-500 relative z-10">
         
         {/* LOGO AREA */}
         <div className="flex-1 flex justify-start items-center h-full relative">
           <img 
             src="/logo.png" 
             alt="Company Logo" 
-            /* 👇 CHANGED: Bumped mobile height up to h-20 (80px) for better visibility */
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 h-20 lg:h-[180px] w-auto object-contain lg:scale-125 origin-left transition-transform duration-500 lg:hover:scale-[1.3]" 
+            /* 👇 CHANGED: Bumped size back up, added 'pointer-events-none' so the transparent background doesn't block the Home button */
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 h-16 sm:h-20 lg:h-[180px] w-auto object-contain lg:scale-125 origin-left transition-transform duration-500 lg:hover:scale-[1.3] pointer-events-none" 
           />
         </div>
 
         {/* DESKTOP NAVIGATION */}
- <nav className="hidden lg:flex flex-none items-center gap-10 xl:gap-12 text-base font-normal relative">
+        {/* 👇 CHANGED: Added 'relative z-10' to ensure the menu sits strictly above the logo layer */}
+ <nav className="hidden lg:flex flex-none items-center gap-10 xl:gap-12 text-base font-normal relative z-10">
   
   {/* HOME */}
   <Link href="/" className="hover:text-company-teal">
@@ -141,7 +142,7 @@ const [dropdownTimeout, setDropdownTimeout] = useState<ReturnType<typeof setTime
 </nav>
 
         {/* RIGHT SIDE AREA */}
-        <div className="flex-1 flex justify-end items-center h-full gap-4">
+        <div className="flex-1 flex justify-end items-center h-full gap-4 relative z-10">
           <div className="hidden sm:block">
             <MyButton variant="light">
               Let's Talk
@@ -160,7 +161,7 @@ const [dropdownTimeout, setDropdownTimeout] = useState<ReturnType<typeof setTime
 
       {/* MOBILE DROP-DOWN DRAWER */}
       {isMenuOpen && (
-  <div className="lg:hidden bg-company-deep border-t border-white/10 px-8 py-6 flex flex-col gap-5 shadow-inner">
+  <div className="lg:hidden bg-company-deep border-t border-white/10 px-8 py-6 flex flex-col gap-5 shadow-inner relative z-20">
 
     {/* MAIN LINKS */}
     {menuItems.map((item) => {
