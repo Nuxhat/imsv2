@@ -59,11 +59,11 @@ const [dropdownTimeout, setDropdownTimeout] = useState<ReturnType<typeof setTime
         {/* LOGO AREA */}
         <div className="flex-1 flex justify-start items-center h-full relative">
           <img 
-            src="/logo.png" 
-            alt="Company Logo" 
-            /* 👇 CHANGED: Bumped size back up, added 'pointer-events-none' so the transparent background doesn't block the Home button */
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 h-16 sm:h-20 lg:h-[180px] w-auto object-contain lg:scale-125 origin-left transition-transform duration-500 lg:hover:scale-[1.3] pointer-events-none" 
-          />
+  src="/logo.png" 
+  alt="Company Logo" 
+  /* 👇 CHANGED: Cranked mobile height up to h-28/h-32 and added a base scale-[1.2] to make it pop! */
+  className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 h-28 sm:h-32 lg:h-[180px] w-auto object-contain scale-[1.2] lg:scale-125 origin-left transition-transform duration-500 lg:hover:scale-[1.3] pointer-events-none" 
+/>
         </div>
 
         {/* DESKTOP NAVIGATION */}
