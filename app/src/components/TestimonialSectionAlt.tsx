@@ -9,14 +9,14 @@ const TestimonialSectionAlt = () => {
       name: "Marvin Kinney",
       role: "Product Manager",
       image: "/testimonial-1.jpg",
-      text: '"Working with their team on our SAP B1 integration was a game-changer. They handled the Sales and Purchase modules perfectly, ensuring our Go-Live was on schedule without any operational downtime. Highly recommended."'
+      text: '"Working with their team on our ERP integration was a game-changer. They handled the Sales and Purchase modules perfectly, ensuring our Go-Live was on schedule without any operational downtime. Highly recommended."'
     },
     {
       id: 2,
       name: "Charlize Theron",
       role: "Operations Director",
       image: "/testimonial-2.jpg",
-      text: '"The sync between our custom frontend and the SAP B1 backend is flawless. Their ongoing AMC support keeps everything running at peak efficiency. Not only the design, but the core architecture is all excellent."'
+      text: '"The sync between our custom frontend and the ERP backend is flawless. Their ongoing AMC support keeps everything running at peak efficiency. Not only the design, but the core architecture is all excellent."'
     },
     {
       id: 3,

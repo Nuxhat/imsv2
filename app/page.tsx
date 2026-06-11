@@ -32,9 +32,9 @@ export default function Home() {
      
       <PortfolioSection />
 
-      <ScrollReveal>
+      {/* <ScrollReveal>
         <TestimonialSection /> 
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       <ScrollReveal>
         <BlogSection /> 

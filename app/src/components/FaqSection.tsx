@@ -12,7 +12,7 @@ const FaqSection = () => {
 
   const faqs = [
     {
-      question: "How long does a typical SAP B1 implementation take?",
+      question: "How long does a typical ERP implementation take?",
       answer: "The timeline varies based on the complexity of your business processes and data migration needs. However, a standard implementation typically takes between 3 to 6 months from initial blueprinting to Go-Live."
     },
     {
@@ -20,8 +20,8 @@ const FaqSection = () => {
       answer: "Our AMC covers continuous system health checks, version upgrades, proactive security audits, and dedicated technical helpdesk support to ensure your ERP environment runs with zero downtime."
     },
     {
-      question: "Can you integrate SAP B1 with our existing web portal?",
-      answer: "Absolutely. We specialize in developing custom APIs and middleware to seamlessly sync your SAP B1 backend with B2B/B2C e-commerce platforms and custom web applications in real-time."
+      question: "Can you integrate ERP with our existing web portal?",
+      answer: "Absolutely. We specialize in developing custom APIs and middleware to seamlessly sync your ERP backend with B2B/B2C e-commerce platforms and custom web applications in real-time."
     },
     {
       question: "Do you provide user training for our staff?",
@@ -29,7 +29,7 @@ const FaqSection = () => {
     },
     {
       question: "How does the initial consultation work?",
-      answer: "We start with a thorough discovery session to understand your current operational bottlenecks. Then, we map out a customized SAP B1 blueprint tailored specifically to your industry requirements."
+      answer: "We start with a thorough discovery session to understand your current operational bottlenecks. Then, we map out a customized ERP blueprint tailored specifically to your industry requirements."
     }
   ];
 

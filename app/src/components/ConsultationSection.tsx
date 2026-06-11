@@ -41,7 +41,7 @@ const ConsultationSection = () => {
               </h2>
 
               <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                Need help with a project or have a question about our SAP B1 implementations? We're here to help you scale your operations.
+                Need help with a project or have a question about our ERP implementations? We're here to help you scale your operations.
               </p>
 
               {/* Form */}

@@ -31,7 +31,7 @@ export default function AMCPage() {
           <div className="mb-6 px-6 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm inline-flex items-center gap-3">
             <span className="text-company-teal font-bold text-lg">+</span>
             <span className="text-[16px] md:text-[18px] font-bold tracking-[0.2em] text-white uppercase">
-              SAP B1 Support
+              ERP Support
             </span>
             <span className="text-company-teal font-bold text-lg">+</span>
           </div>
@@ -43,7 +43,7 @@ export default function AMCPage() {
 
           {/* Description */}
           <p className="text-base md:text-xl text-gray-300 mb-10 max-w-[750px] leading-relaxed">
-            Ensure uninterrupted SAP B1 performance with continuous monitoring, updates, troubleshooting, and expert technical support tailored to your business.
+            Ensure uninterrupted ERperformance with continuous monitoring, updates, troubleshooting, and expert technical support tailored to your business.
           </p>
 
           {/* Buttons */}
@@ -92,7 +92,7 @@ export default function AMCPage() {
               {[
                 {
                   title: "System Monitoring",
-                  desc: "24/7 monitoring of SAP B1 performance and system health.",
+                  desc: "24/7 monitoring of ERP performance and system health.",
                 },
                 {
                   title: "Bug Fixing",

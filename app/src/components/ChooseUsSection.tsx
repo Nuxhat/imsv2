@@ -20,7 +20,7 @@ const ChooseUsSection = () => {
     {
       id: 3,
       title: "Our Awards",
-      description: "Recognized globally for excellence in SAP B1 implementation, delivering seamless Go-Lives with zero operational downtime.",
+      description: "Recognized globally for excellence in ERP implementation, delivering seamless Go-Lives with zero operational downtime.",
       icon: <Award className="w-8 h-8 text-company-deep group-hover:text-company-teal transition-colors duration-300" />
     }
   ];

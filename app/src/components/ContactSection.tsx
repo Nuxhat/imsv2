@@ -119,7 +119,7 @@ const ContactSection = () => {
                       className="w-full px-8 py-5 text-lg rounded-2xl bg-white text-company-deep font-medium focus:outline-none focus:ring-4 focus:ring-company-teal/50 transition-all shadow-sm appearance-none cursor-pointer"
                     >
                       <option value="" disabled>Service Type *</option>
-                      <option value="sap-implementation">SAP B1 Implementation</option>
+                      <option value="erp-implementation">ERP Implementation</option>
                       <option value="amc-support">AMC Support</option>
                       <option value="web-portal">Web Portal Integration</option>
                       <option value="consulting">Business Consulting</option>

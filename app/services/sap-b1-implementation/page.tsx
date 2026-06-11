@@ -32,19 +32,19 @@ export default function SAPB1ImplementationPage() {
           <div className="mb-6 px-6 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm inline-flex items-center gap-3">
             <span className="text-company-teal font-bold text-lg">+</span>
             <span className="text-[16px] md:text-[18px] font-bold tracking-[0.2em] text-white uppercase">
-              SAP B1 Services
+              ERP  Services
             </span>
             <span className="text-company-teal font-bold text-lg">+</span>
           </div>
 
           {/* Title */}
           <h1 className="font-poppins text-5xl md:text-7xl lg:text-[90px] font-bold text-white mb-6 leading-tight">
-            SAP B1 Implementation
+            ERP Implementation
           </h1>
 
           {/* Description */}
           <p className="text-base md:text-xl text-gray-300 mb-10 max-w-[750px] leading-relaxed">
-            End-to-end SAP Business One implementation tailored to your business processes — from blueprinting and data migration to Go-Live support and long-term optimization.
+            End-to-end ERP Business One implementation tailored to your business processes — from blueprinting and data migration to Go-Live support and long-term optimization.
           </p>
 
           {/* Buttons */}
@@ -80,7 +80,7 @@ export default function SAPB1ImplementationPage() {
       </h2>
 
       <p className="text-[18px] leading-[30px] text-gray-600">
-        A complete SAP B1 implementation framework designed to reduce risks, streamline operations, and align your ERP system with long-term business growth.
+        A complete ERP implementation framework designed to reduce risks, streamline operations, and align your ERP system with long-term business growth.
       </p>
     </div>
 
@@ -96,8 +96,8 @@ export default function SAPB1ImplementationPage() {
       desc: "We analyze workflows and design a complete ERP structure tailored to your operations.",
     },
     {
-      title: "SAP Implementation",
-      desc: "End-to-end SAP B1 setup including modules, roles, and system configuration.",
+      title: "ERP Implementation",
+      desc: "End-to-end ERP setup including modules, roles, and system configuration.",
     },
     {
       title: "Data Migration",
@@ -109,7 +109,7 @@ export default function SAPB1ImplementationPage() {
     },
     {
       title: "Training & Enablement",
-      desc: "Hands-on SAP training for teams to ensure smooth adoption.",
+      desc: "Hands-on ERP training for teams to ensure smooth adoption.",
     },
     {
       title: "Go-Live Support",
@@ -144,7 +144,7 @@ export default function SAPB1ImplementationPage() {
         <div
           className="rounded-2xl h-[380px] bg-cover bg-center shadow-xl"
           style={{
-            backgroundImage: "url('/sap-work-1.jpg')",
+            backgroundImage: "url('/erp-work-1.jpg')",
           }}
         />
 
@@ -153,7 +153,7 @@ export default function SAPB1ImplementationPage() {
           <p className="text-xs text-gray-500 mb-1">Success Rate</p>
           <h3 className="text-2xl font-bold text-company-deep">98%</h3>
           <p className="text-xs text-gray-500 mt-1">
-            SAP implementations delivered successfully.
+           ERP implementations delivered successfully.
           </p>
         </div>
 

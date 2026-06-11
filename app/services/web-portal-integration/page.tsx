@@ -31,7 +31,7 @@ export default function WebPortalIntegrationPage() {
           <div className="mb-6 px-6 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm inline-flex items-center gap-3">
             <span className="text-company-teal font-bold text-lg">+</span>
             <span className="text-[16px] md:text-[18px] font-bold tracking-[0.2em] text-white uppercase">
-              SAP B1 Integration
+              ERP Integration
             </span>
             <span className="text-company-teal font-bold text-lg">+</span>
           </div>
@@ -79,7 +79,7 @@ export default function WebPortalIntegrationPage() {
             </h2>
 
             <p className="text-[18px] leading-[30px] text-gray-600">
-              We build intelligent integrations between SAP B1 and web platforms that improve efficiency, customer experience, and real-time decision making.
+              We build intelligent integrations between ERP and web platforms that improve efficiency, customer experience, and real-time decision making.
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export default function WebPortalIntegrationPage() {
               {[
                 {
                   title: "E-Commerce Integration",
-                  desc: "Connect SAP B1 with online stores for real-time product, stock, and order sync.",
+                  desc: "Connect ERP with online stores for real-time product, stock, and order sync.",
                 },
                 {
                   title: "Customer Portals",

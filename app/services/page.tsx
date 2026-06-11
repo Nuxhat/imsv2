@@ -50,8 +50,6 @@ export default function ServicesPage() {
        <ServicesSection showMoreButton={false} />
       </div>
 
-      {/* 4. THE NEW PRICING SECTION */}
-      {/* <PricingSection /> */}
 
  
        {/* 5. TEAM SECTION */}

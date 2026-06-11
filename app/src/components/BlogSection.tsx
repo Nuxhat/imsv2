@@ -7,14 +7,14 @@ const BlogSection = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "Maximizing ROI with the Latest SAP B1 Features",
+      title: "Maximizing ROI with the Latest ERP Features",
       author: "Admin",
       date: "October 12, 2026",
       image: "/blog-1.jpg"
     },
     {
       id: 2,
-      title: "Bridging the Gap: Integrating SAP B1 with B2B Portals",
+      title: "Bridging the Gap: Integrating ERP with B2B Portals",
       author: "Admin",
       date: "September 28, 2026",
       image: "/blog-2.jpg"

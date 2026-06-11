@@ -5,9 +5,9 @@ import ScrollReveal from './ScrollReveal'; // Import the animator!
 
 const AboutSection = () => {
   const logos = [
-    'SAP', 'Google', 'logitech', 'CHASE', 'factual', 'Matrixian',
-    'SAP', 'Google', 'logitech', 'CHASE', 'factual', 'Matrixian',
-    'SAP', 'Google', 'logitech', 'CHASE', 'factual', 'Matrixian'
+    // 'SP', 'Google', 'logitech', 'CHASE', 'factual', 'Matrixian',
+    // 'SAP', 'Google', 'logitech', 'CHASE', 'factual', 'Matrixian',
+    // 'SAP', 'Google', 'logitech', 'CHASE', 'factual', 'Matrixian'
   ];
 
   return (
@@ -26,7 +26,7 @@ const AboutSection = () => {
       `}} />
 
       {/* 1. SCROLLING LOGO TICKER */}
-      <ScrollReveal delay={0}>
+      {/* <ScrollReveal delay={0}>
         <div className="w-full border-b border-gray-200 pb-10 mb-20 relative">
           <div className="overflow-hidden flex w-full">
             <div className="bulletproof-marquee flex items-center gap-24 px-10">
@@ -41,7 +41,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       {/* 2. MAIN CONTENT GRID */}
       <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -141,7 +141,7 @@ const AboutSection = () => {
 
           <ScrollReveal delay={400}>
            <p className="text-[18px] leading-[28px] font-normal text-[#1C2539] mb-8 max-w-lg">
-    Our mission is to empower businesses of all sizes to thrive in an ever-changing marketplace. We provide end-to-end SAP B1 solutions.
+    Our mission is to empower businesses of all sizes to thrive in an ever-changing marketplace. We provide end-to-end ERP solutions.
   </p>
           </ScrollReveal>
 

@@ -7,7 +7,7 @@ const PortfolioSection = () => {
   const portfolioCards = [
     {
       id: 1,
-      badge: "SAP B1 Implementation",
+      badge: "ERP Implementation",
       title: "Innovation meets \nbusiness needs",
       description:
         "Our mission is to empower businesses of all sizes to thrive in an ever-changing marketplace. We seamlessly integrated their core processes to ensure scalable, long-term success.",
@@ -19,7 +19,7 @@ const PortfolioSection = () => {
       badge: "Risk Management & AMC",
       title: "Protecting business \nfrom uncertainty",
       description:
-        "We ensure your SAP B1 landscape is secure and compliant. Through comprehensive Annual Maintenance Contracts (AMC) and proactive audits, we safeguard your critical business data and web portal integrations from disruptions.",
+        "We ensure your ERP landscape is secure and compliant. Through comprehensive Annual Maintenance Contracts (AMC) and proactive audits, we safeguard your critical business data and web portal integrations from disruptions.",
       image: "/sap-portfolio-2.jpg",
       bgColor: "bg-[#F2F0FF]",
     },

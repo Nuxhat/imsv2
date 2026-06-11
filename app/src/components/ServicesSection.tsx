@@ -9,7 +9,7 @@ const ServicesSection = ({ showMoreButton = true }: { showMoreButton?: boolean }
   const services = [
     {
       id: 1,
-    title: "SAP B1 Implementation",
+    title: "ERP Implementation",
     slug: "sap-b1-implementation",
       description: "End-to-end ERP deployment tailored to your business. From initial blueprinting to seamless Go-Live.",
       icon: <Server className="w-7 h-7 text-company-blue group-hover:text-company-teal transition-colors duration-300" />,
@@ -19,7 +19,7 @@ const ServicesSection = ({ showMoreButton = true }: { showMoreButton?: boolean }
       id: 2,
     title: "Web Portal Integration",
     slug: "web-portal-integration",
-      description: "Connect your SAP B1 backend with customized B2B and B2C web applications for real-time sync.",
+      description: "Connect your ERP backend with customized B2B and B2C web applications for real-time sync.",
       icon: <Globe className="w-7 h-7 text-company-blue group-hover:text-company-teal transition-colors duration-300" />,
       features: ["E-Commerce Sync", "Customer Dashboards", "API Development"]
     },
@@ -35,7 +35,7 @@ const ServicesSection = ({ showMoreButton = true }: { showMoreButton?: boolean }
       id: 4,
       title: "Custom Add-on Dev",
       slug: "custom-add-on-dev",
-      description: "Extend SAP B1 capabilities with custom modules, HANA Studio extensions, and specific automated workflows.",
+      description: "Extend ERP capabilities with custom modules, HANA Studio extensions, and specific automated workflows.",
       icon: <Code className="w-7 h-7 text-company-blue group-hover:text-company-teal transition-colors duration-300" />,
       features: ["HANA Studio Experts", "Automated Workflows", "3rd-Party Plugins"]
     },

@@ -9,8 +9,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "IMS Consulting | SAP Business One & Enterprise Solutions",
-  description: "Expert SAP Business One implementation, web portal integration, custom add-on development, and AMC services to drive your digital transformation.",
+  title: "IMS Consulting | ERP Business One & Enterprise Solutions",
+  description: "Expert ERP Business One implementation, web portal integration, custom add-on development, and AMC services to drive your digital transformation.",
 };
 export default function RootLayout({
   children,

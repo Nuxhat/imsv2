@@ -10,7 +10,7 @@ const TestimonialSection = () => {
       role: "Operations Director",
       company: "Istanbul Lighting",
       image: "/testimonial-1.jpg",
-      text: '"The SAP B1 implementation was seamless. Their team handled the Sales and Purchase modules perfectly, ensuring our Go-Live was on schedule without any operational downtime. Best ERP consultants we have worked with."'
+      text: '"The ERP implementation was seamless. Their team handled the Sales and Purchase modules perfectly, ensuring our Go-Live was on schedule without any operational downtime. Best ERP consultants we have worked with."'
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const TestimonialSection = () => {
       role: "Project Lead",
       company: "Armada Holdings",
       image: "/testimonial-2.jpg",
-      text: '"Working with their team on the Web Portal Application integration was a game-changer. The sync between our custom frontend and the SAP B1 backend is flawless. Their ongoing AMC support keeps everything running at peak efficiency."'
+      text: '"Working with their team on the Web Portal Application integration was a game-changer. The sync between our custom frontend and the ERP backend is flawless. Their ongoing AMC support keeps everything running at peak efficiency."'
     }
   ];
 
