@@ -31,7 +31,7 @@ export default function DataHANAReportingPage() {
           <div className="mb-6 px-6 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm inline-flex items-center gap-3">
             <span className="text-company-teal font-bold text-lg">+</span>
             <span className="text-[16px] md:text-[18px] font-bold tracking-[0.2em] text-white uppercase">
-              SAP Reporting Services
+                ERP Reporting Services
             </span>
             <span className="text-company-teal font-bold text-lg">+</span>
           </div>
@@ -43,7 +43,7 @@ export default function DataHANAReportingPage() {
 
           {/* Description */}
           <p className="text-base md:text-xl text-gray-300 mb-10 max-w-[750px] leading-relaxed">
-            Transform SAP HANA data into powerful business insights with dashboards, financial reports, and real-time analytics designed for decision-making.
+            Transform   ERP HANA data into powerful business insights with dashboards, financial reports, and real-time analytics designed for decision-making.
           </p>
 
           {/* Buttons */}
@@ -79,7 +79,7 @@ export default function DataHANAReportingPage() {
             </h2>
 
             <p className="text-[18px] leading-[30px] text-gray-600">
-              We turn raw SAP data into actionable intelligence using structured reporting systems and interactive dashboards.
+              We turn raw   ERP data into actionable intelligence using structured reporting systems and interactive dashboards.
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export default function DataHANAReportingPage() {
               {[
                 {
                   title: "Crystal Reports",
-                  desc: "Professional SAP reports for finance, inventory, and operations."
+                  desc: "Professional   ERP reports for finance, inventory, and operations."
                 },
                 {
                   title: "HANA Dashboards",
@@ -112,7 +112,7 @@ export default function DataHANAReportingPage() {
                 },
                 {
                   title: "Real-Time Reporting",
-                  desc: "Live data reporting directly from SAP HANA."
+                  desc: "Live data reporting directly from   ERP HANA."
                 },
               ].map((item, i) => (
                 <div
@@ -152,7 +152,7 @@ export default function DataHANAReportingPage() {
                 <p className="text-xs text-gray-500 mb-1">Reporting Accuracy</p>
                 <h3 className="text-2xl font-bold text-company-deep">99%</h3>
                 <p className="text-xs text-gray-500 mt-1">
-                  Data accuracy across SAP systems.
+                  Data accuracy across   ERP systems.
                 </p>
               </div>
 

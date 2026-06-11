@@ -43,7 +43,7 @@ export default function CustomAddOnDevPage() {
 
           {/* Description */}
           <p className="text-base md:text-xl text-gray-300 mb-10 max-w-[750px] leading-relaxed">
-            We extend SAP Business One with custom modules, automation workflows, and intelligent integrations tailored to your business operations.
+            We extend   ERP Business One with custom modules, automation workflows, and intelligent integrations tailored to your business operations.
           </p>
 
           {/* Buttons */}
@@ -92,7 +92,7 @@ export default function CustomAddOnDevPage() {
               {[
                 {
                   title: "Custom Modules",
-                  desc: "Build tailored SAP modules to match unique business workflows.",
+                  desc: "Build tailored   ERP modules to match unique business workflows.",
                 },
                 {
                   title: "Workflow Automation",
@@ -100,11 +100,11 @@ export default function CustomAddOnDevPage() {
                 },
                 {
                   title: "HANA Extensions",
-                  desc: "Enhance SAP HANA capabilities with advanced development tools.",
+                  desc: "Enhance   ERP HANA capabilities with advanced development tools.",
                 },
                 {
                   title: "3rd Party Integration",
-                  desc: "Connect SAP with external apps, APIs, and platforms.",
+                  desc: "Connect   ERP with external apps, APIs, and platforms.",
                 },
                 {
                   title: "Business Optimization",
@@ -153,7 +153,7 @@ export default function CustomAddOnDevPage() {
                 <p className="text-xs text-gray-500 mb-1">Custom Builds</p>
                 <h3 className="text-2xl font-bold text-company-deep">100+</h3>
                 <p className="text-xs text-gray-500 mt-1">
-                  SAP enhancements successfully delivered.
+                    ERP enhancements successfully delivered.
                 </p>
               </div>
 

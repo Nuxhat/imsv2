@@ -8,7 +8,7 @@ const ChooseUsSection = () => {
     {
       id: 1,
       title: "Our Mission",
-      description: "Our mission is to push boundaries with innovative SAP architectures, engaging audiences and driving scalable enterprise growth.",
+      description: "Our mission is to push boundaries with innovative   ERP architectures, engaging audiences and driving scalable enterprise growth.",
       icon: <Target className="w-8 h-8 text-company-deep group-hover:text-company-teal transition-colors duration-300" />
     },
     {
@@ -66,7 +66,7 @@ const ChooseUsSection = () => {
 
             <ScrollReveal delay={400}>
               <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-xl">
-                We provide dependable and tailored SAP consulting services that help your business navigate technical challenges and seize operational opportunities.
+                We provide dependable and tailored   ERP consulting services that help your business navigate technical challenges and seize operational opportunities.
               </p>
             </ScrollReveal>
 

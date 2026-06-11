@@ -49,7 +49,7 @@ const PortfolioSection = () => {
 
           <ScrollReveal delay={200}>
             <p className="text-[18px] leading-[28px] font-normal text-[#1C2539] max-w-xl lg:mt-4">
-              Our SAP consulting team specializes in providing innovative,
+              Our   ERP consulting team specializes in providing innovative,
               enterprise-grade ERP systems that harness the power of real-time
               data, reducing operational bottlenecks for clients worldwide.
             </p>

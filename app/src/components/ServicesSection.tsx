@@ -27,7 +27,7 @@ const ServicesSection = ({ showMoreButton = true }: { showMoreButton?: boolean }
        id: 3,
     title: "Annual Maintenance (AMC)",
     slug: "amc",
-          description: "Continuous health checks, version upgrades, and dedicated technical support for your SAP environment.",
+          description: "Continuous health checks, version upgrades, and dedicated technical support for your   ERP environment.",
       icon: <ShieldCheck className="w-7 h-7 text-company-blue group-hover:text-company-teal transition-colors duration-300" />,
       features: ["Performance Tuning", "Version Upgrades", "Helpdesk Support"]
     },
@@ -51,7 +51,7 @@ const ServicesSection = ({ showMoreButton = true }: { showMoreButton?: boolean }
       id: 6,
       title: "User Training & Audits",
       slug: "user-training-audits",
-      description: "Empower your team with comprehensive SAP training and periodic audits to ensure optimal system usage.",
+      description: "Empower your team with comprehensive   ERP training and periodic audits to ensure optimal system usage.",
       icon: <Users className="w-7 h-7 text-company-blue group-hover:text-company-teal transition-colors duration-300" />,
       features: ["On-site Training", "Process Optimization", "Security Audits"]
     }

@@ -79,7 +79,7 @@ export default function AMCPage() {
             </h2>
 
             <p className="text-[18px] leading-[30px] text-gray-600">
-              Our AMC service ensures your SAP system runs smoothly with proactive monitoring, fast issue resolution, and continuous improvements.
+              Our AMC service ensures your   ERP system runs smoothly with proactive monitoring, fast issue resolution, and continuous improvements.
             </p>
           </div>
 
@@ -100,7 +100,7 @@ export default function AMCPage() {
                 },
                 {
                   title: "Performance Tuning",
-                  desc: "Optimize SAP speed, queries, and backend performance.",
+                  desc: "Optimize   ERP speed, queries, and backend performance.",
                 },
                 {
                   title: "Version Upgrades",
@@ -153,7 +153,7 @@ export default function AMCPage() {
                 <p className="text-xs text-gray-500 mb-1">System Uptime</p>
                 <h3 className="text-2xl font-bold text-company-deep">99.9%</h3>
                 <p className="text-xs text-gray-500 mt-1">
-                  Reliable SAP support & maintenance.
+                  Reliable   ERP support & maintenance.
                 </p>
               </div>
 

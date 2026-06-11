@@ -27,7 +27,7 @@ const Footer = () => {
             />
             
             <p className="text-gray-400 mb-8 leading-relaxed max-w-sm pr-4">
-              We provide end-to-end SAP Business One implementations, custom web portal integrations, and dedicated AMC support to help your business scale efficiently.
+              We provide end-to-end   ERP Business One implementations, custom web portal integrations, and dedicated AMC support to help your business scale efficiently.
             </p>
 
             {/* Social Icons (Currently Commented Out) */}
@@ -67,7 +67,7 @@ const Footer = () => {
           <ScrollReveal delay={200} className="lg:col-span-2 lg:col-start-8">
             <h4 className="text-xl font-bold text-white mb-6">Services</h4>
             <ul className="flex flex-col gap-4">
-              {['SAP B1 Implementation', 'AMC Support', 'Web Portal Integration', 'Custom Add-ons', 'HANA Reporting'].map((link, i) => (
+              {['  ERP B1 Implementation', 'AMC Support', 'Web Portal Integration', 'Custom Add-ons', 'HANA Reporting'].map((link, i) => (
                 <li key={i}>
                   <Link href="#" className="text-gray-400 hover:text-company-teal hover:translate-x-1 transition-all duration-300 inline-block">
                     {link}

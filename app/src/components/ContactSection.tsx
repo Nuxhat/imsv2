@@ -34,7 +34,7 @@ const ContactSection = () => {
             <ScrollReveal delay={200}>
               {/* Description */}
               <p className="text-xl lg:text-2xl text-gray-600 mb-16 leading-relaxed max-w-3xl">
-                Whether you need a complete SAP Business One implementation, custom Web Portal integration, or dedicated Annual Maintenance Contract (AMC) support, our team of experts is ready to deliver.
+                Whether you need a complete   ERP Business One implementation, custom Web Portal integration, or dedicated Annual Maintenance Contract (AMC) support, our team of experts is ready to deliver.
               </p>
             </ScrollReveal>
 
@@ -49,7 +49,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-3xl   text-company-deep mb-3 tracking-tight">
-                      50+ SAP Go-Lives
+                      50+   ERP Go-Lives
                     </h4>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg">
                       Successfully delivered tailored ERP solutions across manufacturing, retail, and service sectors worldwide.

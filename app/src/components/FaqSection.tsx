@@ -58,7 +58,7 @@ const FaqSection = () => {
 
             <ScrollReveal delay={200}>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-md">
-                In relation to SAP implementations and custom integrations, proper architecture considers the scalability of the product. It's all about making sure the system works flawlessly for you.
+                In relation to   ERP implementations and custom integrations, proper architecture considers the scalability of the product. It's all about making sure the system works flawlessly for you.
               </p>
             </ScrollReveal>
 

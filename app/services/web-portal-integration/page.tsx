@@ -12,7 +12,7 @@ export default function WebPortalIntegrationPage() {
 
       <Header />
 
-      {/* HERO SECTION (same style as SAP page) */}
+      {/* HERO SECTION (same style as   ERP page) */}
       <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-28 overflow-hidden">
 
         {/* Background Image */}
@@ -43,7 +43,7 @@ export default function WebPortalIntegrationPage() {
 
           {/* Description */}
           <p className="text-base md:text-xl text-gray-300 mb-10 max-w-[750px] leading-relaxed">
-            We connect SAP Business One with modern web portals, enabling real-time sync, automation, and seamless digital experiences across your business ecosystem.
+            We connect   ERP Business One with modern web portals, enabling real-time sync, automation, and seamless digital experiences across your business ecosystem.
           </p>
 
           {/* Buttons */}
@@ -108,7 +108,7 @@ export default function WebPortalIntegrationPage() {
                 },
                 {
                   title: "Real-time Sync",
-                  desc: "Live synchronization of SAP data with external applications.",
+                  desc: "Live synchronization of   ERP data with external applications.",
                 },
                 {
                   title: "Analytics Dashboards",
@@ -153,7 +153,7 @@ export default function WebPortalIntegrationPage() {
                 <p className="text-xs text-gray-500 mb-1">Integration Efficiency</p>
                 <h3 className="text-2xl font-bold text-company-deep">99%</h3>
                 <p className="text-xs text-gray-500 mt-1">
-                  Seamless SAP to Web synchronization success.
+                  Seamless   ERP to Web synchronization success.
                 </p>
               </div>
 

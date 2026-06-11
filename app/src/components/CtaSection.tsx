@@ -40,7 +40,7 @@ const CtaSection = () => {
               Thriving on consistent,
               <br className="hidden lg:block" />
               <span className="text-company-teal">
-                optimized SAP performance.
+                optimized ERP performance.
               </span>
             </h2>
 
@@ -48,7 +48,7 @@ const CtaSection = () => {
             <p className="text-lg md:text-2xl lg:text-[26px] text-gray-300 mb-12 leading-relaxed max-w-5xl">
               You've done the hard part—building your business and winning
               customers. Now, our dedicated AMC services make it effortless to
-              keep your SAP environment secure, upgraded, and running at peak
+              keep your   ERP environment secure, upgraded, and running at peak
               efficiency.
             </p>
 

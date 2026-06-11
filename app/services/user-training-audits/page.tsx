@@ -31,7 +31,7 @@ export default function UserTrainingAuditsPage() {
           <div className="mb-6 px-6 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm inline-flex items-center gap-3">
             <span className="text-company-teal font-bold text-lg">+</span>
             <span className="text-[16px] md:text-[18px] font-bold tracking-[0.2em] text-white uppercase">
-              SAP Training Services
+                ERP Training Services
             </span>
             <span className="text-company-teal font-bold text-lg">+</span>
           </div>
@@ -43,7 +43,7 @@ export default function UserTrainingAuditsPage() {
 
           {/* Description */}
           <p className="text-base md:text-xl text-gray-300 mb-10 max-w-[750px] leading-relaxed">
-            Empower your workforce with structured SAP training programs and ensure system integrity through continuous audits and performance evaluations.
+            Empower your workforce with structured   ERP training programs and ensure system integrity through continuous audits and performance evaluations.
           </p>
 
           {/* Buttons */}
@@ -79,7 +79,7 @@ export default function UserTrainingAuditsPage() {
             </h2>
 
             <p className="text-[18px] leading-[30px] text-gray-600">
-              We ensure your team is fully trained on SAP systems while maintaining compliance, security, and operational efficiency through structured audits.
+              We ensure your team is fully trained on   ERP systems while maintaining compliance, security, and operational efficiency through structured audits.
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function UserTrainingAuditsPage() {
 
               {[
                 {
-                  title: "SAP Training Sessions",
+                  title: "  ERP Training Sessions",
                   desc: "Hands-on training for end-users, admins, and managers."
                 },
                 {
@@ -100,7 +100,7 @@ export default function UserTrainingAuditsPage() {
                 },
                 {
                   title: "System Audits",
-                  desc: "Regular audits to ensure SAP best practices are followed."
+                  desc: "Regular audits to ensure   ERP best practices are followed."
                 },
                 {
                   title: "Process Optimization",
@@ -152,7 +152,7 @@ export default function UserTrainingAuditsPage() {
                 <p className="text-xs text-gray-500 mb-1">Training Efficiency</p>
                 <h3 className="text-2xl font-bold text-company-deep">96%</h3>
                 <p className="text-xs text-gray-500 mt-1">
-                  Teams trained successfully on SAP systems.
+                  Teams trained successfully on   ERP systems.
                 </p>
               </div>
 
