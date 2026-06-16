@@ -31,7 +31,7 @@ const ContactSection = () => {
       serviceType: selectedService
     };
 
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz64CB3ZQTdy4pxRTAkF7u39ON0aRJNoJA2RIY--uWLUztVsiyd5QDuJQLWTPCp-IBdAg/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwraUzYBFrX3UScEzRoxtS7UiLGAQg91yVRgqLSD_jURBtuPiwlKPl8VZAgXuYby3vG-Q/exec";
 
     try {
       await fetch(SCRIPT_URL, {
