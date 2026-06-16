@@ -52,11 +52,11 @@ export default function AboutPage() {
       {/* 4. THE NEW "WHY CHOOSE US" SECTION */}
       <ChooseUsSection />
 
-      {/* 6. TEAM SECTION */}
-      <TeamSection />
+      {/* 6. TEAM SECTION
+      <TeamSection /> */}
 
-    {/* 6. SPLIT-LAYOUT TESTIMONIAL SECTION */}
-      <TestimonialSectionAlt />
+    {/* 6. SPLIT-LAYOUT TESTIMONIAL SECTION
+      <TestimonialSectionAlt /> */}
 
       {/* 7. FAQ SECTION */}
       <FaqSection />

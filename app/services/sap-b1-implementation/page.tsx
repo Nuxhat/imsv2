@@ -144,7 +144,7 @@ export default function SAPB1ImplementationPage() {
         <div
           className="rounded-2xl h-[380px] bg-cover bg-center shadow-xl"
           style={{
-            backgroundImage: "url('/erp-work-1.jpg')",
+            backgroundImage: "url('/sap-work-1.jpg')",
           }}
         />
 
