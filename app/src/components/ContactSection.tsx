@@ -1,9 +1,15 @@
-// src/components/ContactSection.tsx
-import { ArrowRight, CheckCircle2, Users } from 'lucide-react';
-import ScrollReveal from './ScrollReveal'; // Import the animator!
+"use client"; // Required for state and click events
+
+import { useState } from 'react';
+import { CheckCircle2, Users } from 'lucide-react';
+import ScrollReveal from './ScrollReveal'; 
 import MyButton from './MyButton';
 
 const ContactSection = () => {
+  // State variables for the custom dropdown
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
+
   return (
     <section className="bg-white py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-12 xl:px-16 max-w-[1600px]">
@@ -16,17 +22,17 @@ const ContactSection = () => {
             <ScrollReveal delay={0}>
               {/* Pill Badge */}
               <div className="mb-10 px-6 py-3 rounded-full border border-gray-200 bg-white inline-flex items-center gap-4 shadow-sm">
-                <span className="text-company-teal   text-2xl leading-none">+</span> 
+                <span className="text-company-teal text-2xl leading-none">+</span> 
                 <span className="text-sm md:text-base font-bold tracking-[0.2em] text-company-deep uppercase">
                   Contact Us
                 </span> 
-                <span className="text-company-teal   text-2xl leading-none">+</span>
+                <span className="text-company-teal text-2xl leading-none">+</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
               {/* Heading */}
-              <h2 className="text-5xl md:text-6xl lg:text-[72px]   text-company-deep leading-[1.05] tracking-tight mb-10">
+              <h2 className="text-5xl md:text-6xl lg:text-[72px] text-company-deep leading-[1.05] tracking-tight mb-10">
                 Let's Build an Awesome Project Together
               </h2>
             </ScrollReveal>
@@ -34,7 +40,7 @@ const ContactSection = () => {
             <ScrollReveal delay={200}>
               {/* Description */}
               <p className="text-xl lg:text-2xl text-gray-600 mb-16 leading-relaxed max-w-3xl">
-                Whether you need a complete   ERP Business One implementation, custom Web Portal integration, or dedicated Annual Maintenance Contract (AMC) support, our team of experts is ready to deliver.
+                Whether you need a complete ERP Business One implementation, custom Web Portal integration, or dedicated Annual Maintenance Contract (AMC) support, our team of experts is ready to deliver.
               </p>
             </ScrollReveal>
 
@@ -48,8 +54,8 @@ const ContactSection = () => {
                     <CheckCircle2 className="w-10 h-10 text-company-teal" />
                   </div>
                   <div>
-                    <h4 className="text-3xl   text-company-deep mb-3 tracking-tight">
-                      50+   ERP Go-Lives
+                    <h4 className="text-3xl text-company-deep mb-3 tracking-tight">
+                      50+ ERP Go-Lives
                     </h4>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg">
                       Successfully delivered tailored ERP solutions across manufacturing, retail, and service sectors worldwide.
@@ -65,7 +71,7 @@ const ContactSection = () => {
                     <Users className="w-10 h-10 text-company-teal" />
                   </div>
                   <div>
-                    <h4 className="text-3xl   text-company-deep mb-3 tracking-tight">
+                    <h4 className="text-3xl text-company-deep mb-3 tracking-tight">
                       100% AMC Retention
                     </h4>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg">
@@ -79,7 +85,6 @@ const ContactSection = () => {
           </div>
 
           {/* RIGHT COLUMN: The Form */}
-          {/* We animate the entire card as one cohesive block so it feels substantial */}
           <ScrollReveal delay={200} className="w-full">
             <div className="bg-company-deep rounded-[48px] p-10 md:p-16 lg:p-20 relative overflow-hidden shadow-2xl">
               
@@ -88,7 +93,7 @@ const ContactSection = () => {
 
               <div className="relative z-10">
                 
-                <h3 className="heading-main   text-white mb-6 tracking-tight">
+                <h3 className="heading-main text-white mb-6 tracking-tight">
                   Make an Appointment
                 </h3>
 
@@ -97,7 +102,6 @@ const ContactSection = () => {
                 </p>
 
                 <form className="flex flex-col gap-6">
-                  
                   <input 
                     type="text"
                     placeholder="Your Name *"
@@ -112,25 +116,55 @@ const ContactSection = () => {
                     className="w-full px-8 py-5 text-lg rounded-2xl bg-white text-company-deep font-medium placeholder:text-gray-400 focus:outline-none focus:ring-4 focus:ring-company-teal/50 transition-all shadow-sm"
                   />
 
+                  {/* CUSTOM DROPDOWN */}
                   <div className="relative">
-                    <select
-                      required
-                      defaultValue=""
-                      className="w-full px-8 py-5 text-lg rounded-2xl bg-white text-company-deep font-medium focus:outline-none focus:ring-4 focus:ring-company-teal/50 transition-all shadow-sm appearance-none cursor-pointer"
-                    >
-                      <option value="" disabled>Service Type *</option>
-                      <option value="erp-implementation">ERP Implementation</option>
-                      <option value="amc-support">AMC Support</option>
-                      <option value="web-portal">Web Portal Integration</option>
-                      <option value="consulting">Business Consulting</option>
-                    </select>
+                    <input 
+                      type="hidden" 
+                      required 
+                      value={selectedService} 
+                      onChange={(e) => setSelectedService(e.target.value)} 
+                    />
 
-                    <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none">
-                      <svg width="18" height="10" viewBox="0 0 14 8" fill="none">
+                    <div
+                      onClick={() => setIsOpen(!isOpen)}
+                      className={`w-full px-8 py-5 text-lg rounded-2xl bg-white font-medium focus:outline-none focus:ring-4 focus:ring-company-teal/50 transition-all shadow-sm cursor-pointer flex justify-between items-center ${
+                        selectedService ? "text-company-deep" : "text-gray-400"
+                      }`}
+                    >
+                      <span>{selectedService || "Service Type *"}</span>
+                      
+                      <svg 
+                        width="18" height="10" viewBox="0 0 14 8" fill="none"
+                        className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                      >
                         <path d="M1 1L7 7L13 1" stroke="#000A3F" strokeWidth="2.5" />
                       </svg>
                     </div>
+{isOpen && (
+  <ul className="absolute z-50 w-full mt-2 bg-white border border-gray-100 rounded-2xl shadow-xl overflow-hidden text-lg font-medium text-company-deep">
+    {[
+      "ERP Implementation",
+      "AMC Support",
+      "Web Portal Integration",
+      "Custom Add-on Development",
+      "Data & HANA Reporting",
+      "User Training & Audits"
+    ].map((service) => (
+      <li
+        key={service}
+        onClick={() => {
+          setSelectedService(service);
+          setIsOpen(false);
+        }}
+        className="px-8 py-4 cursor-pointer hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-none"
+      >
+        {service}
+      </li>
+    ))}
+  </ul>
+)}
                   </div>
+                  {/* END CUSTOM DROPDOWN */}
 
                   <textarea
                     placeholder="Your Comment *"
@@ -139,10 +173,9 @@ const ContactSection = () => {
                     className="w-full px-8 py-5 text-lg rounded-2xl bg-white text-company-deep font-medium placeholder:text-gray-400 focus:outline-none focus:ring-4 focus:ring-company-teal/50 transition-all shadow-sm resize-none"
                   />
 
-             <MyButton variant="light" type="submit" className="mt-6">
-  Send Message
-</MyButton>
-
+                  <MyButton variant="light" type="submit" className="mt-6">
+                    Send Message
+                  </MyButton>
                 </form>
 
               </div>
