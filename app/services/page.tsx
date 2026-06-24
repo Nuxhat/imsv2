@@ -52,8 +52,8 @@ export default function ServicesPage() {
 
 
  
-       {/* 5. TEAM SECTION
-        <TeamSection />   */}
+       {/* 5. TEAM SECTION */}
+        <TeamSection />   
 
         {/* 5. SPLIT CONSULTATION SECTION */}
       <ConsultationSection />                    
