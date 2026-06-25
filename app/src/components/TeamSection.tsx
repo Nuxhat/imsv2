@@ -12,7 +12,7 @@ const TeamSection = () => {
     {
       id: 2,
       name: "Saad Sabri",
-      role: "Head of Programming",
+      role: "Head of Development",
       image: "/team-1.jpg",
     },
     // {
