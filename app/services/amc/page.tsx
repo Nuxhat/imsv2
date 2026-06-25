@@ -165,9 +165,10 @@ export default function AMCPage() {
  <ScrollReveal>
           <PortfolioSection/>
       </ScrollReveal>
-                 <ScrollReveal>
+
+                 {/* <ScrollReveal>
         <BlogSection /> 
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       <ScrollReveal>
         <ContactSection /> 

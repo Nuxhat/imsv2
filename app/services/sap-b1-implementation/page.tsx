@@ -167,9 +167,9 @@ export default function SAPB1ImplementationPage() {
        <ScrollReveal>
           <PortfolioSection />
       </ScrollReveal>
-                 <ScrollReveal>
+                 {/* <ScrollReveal>
         <BlogSection /> 
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       <ScrollReveal>
         <ContactSection /> 

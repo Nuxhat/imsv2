@@ -165,9 +165,9 @@ export default function CustomAddOnDevPage() {
  <ScrollReveal>
           <PortfolioSection />
       </ScrollReveal>
-                 <ScrollReveal>
+                 {/* <ScrollReveal>
         <BlogSection /> 
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       <ScrollReveal>
         <ContactSection /> 

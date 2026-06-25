@@ -165,9 +165,9 @@ export default function WebPortalIntegrationPage() {
  <ScrollReveal>
           <PortfolioSection />
       </ScrollReveal>
-                 <ScrollReveal>
+                 {/* <ScrollReveal>
         <BlogSection /> 
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       <ScrollReveal>
         <ContactSection /> 

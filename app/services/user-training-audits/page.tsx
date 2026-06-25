@@ -164,9 +164,9 @@ export default function UserTrainingAuditsPage() {
  <ScrollReveal>
           <PortfolioSection />
       </ScrollReveal>
-                 <ScrollReveal>
+                 {/* <ScrollReveal>
         <BlogSection /> 
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       <ScrollReveal>
         <ContactSection /> 

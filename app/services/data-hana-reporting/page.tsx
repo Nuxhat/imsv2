@@ -164,9 +164,9 @@ export default function DataHANAReportingPage() {
  <ScrollReveal>
           <PortfolioSection />
       </ScrollReveal>
-                 <ScrollReveal>
+                 {/* <ScrollReveal>
         <BlogSection /> 
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       <ScrollReveal>
         <ContactSection /> 
