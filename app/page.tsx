@@ -36,9 +36,9 @@ export default function Home() {
         <TestimonialSection /> 
       </ScrollReveal> */}
 
-      <ScrollReveal>
+      {/* <ScrollReveal>
         <BlogSection /> 
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       <ScrollReveal>
         <ContactSection /> 
